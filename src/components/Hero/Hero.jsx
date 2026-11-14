@@ -49,7 +49,7 @@ function Hero() {
         <Reveal className="hero-copy">
           <h1 id="hero-title"><ScrambleText text={'Aaron Fahrasmane'}/></h1>
           <p className="hero-status"><span>Je suis</span> <strong><TypeWriter texts={["Développeur web Full-Stack","à la rechreche d'un stage","Développeur mobile", "UI Designer", "Photographe", "Créatif", "Eternel insatisfait",'Celui dont vous avez besoin']} speed={80} /></strong></p>
-          <p className="hero-subtitle">Développeur web · En recherche de stage full-stack</p>
+          <p className="hero-subtitle">Développeur web · recherche un stage à partir d'Avril</p>
         </Reveal>
 
         <a className="hero-scroll" href="#a-propos"><span aria-hidden="true" />Défiler</a>

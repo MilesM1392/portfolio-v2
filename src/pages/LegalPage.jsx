@@ -26,12 +26,12 @@ function LegalPage() {
     <div className="legal-page">
       <header className="legal-header">
         <nav className="legal-nav" aria-label="Navigation principale">
-          <a href="/#accueil">Accueil</a><a href="/#a-propos">À propos</a><a href="/#realisations">Réalisations</a><a className="legal-nav-contact" href="/#contact">Me Contacter</a>
+          <a href="/portfolio/#accueil">Accueil</a><a href="/portfolio/#a-propos">À propos</a><a href="/portfolio/#realisations">Réalisations</a><a className="legal-nav-contact" href="/portfolio/#contact">Me Contacter</a>
         </nav>
       </header>
       <main className="legal-content">
         {/* Données légales regroupées par sujet ; les coordonnées sont définies en haut du fichier. */}
-        <a className="legal-back" href="/#accueil">← Retour au portfolio</a>
+        <a className="legal-back" href="/portfolio/#accueil">← Retour au portfolio</a>
         <div className="legal-title"><h1>Mentions légales</h1><p>Dernière mise à jour : 10/11/2026</p></div>
         <div className="legal-rule" />
         <section><h2>Éditeur du site</h2><DetailRows rows={publisherDetails} /></section>

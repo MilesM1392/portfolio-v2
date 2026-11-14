@@ -23,7 +23,7 @@ function ContactPage() {
     <div className="contact-page">
       <header className="contact-page-header">
         <nav className="contact-page-nav" aria-label="Navigation principale">
-          <a href="/#accueil">Accueil</a><a href="/#a-propos">À propos</a><a href="/#realisations">Réalisations</a><a className="is-current" href="#contact">Me Contacter</a>
+          <a href="/portfolio/#accueil">Accueil</a><a href="/portfolio/#a-propos">À propos</a><a href="/portfolio/#realisations">Réalisations</a><a className="is-current" href="#contact">Me Contacter</a>
         </nav>
       </header>
       <main id="contact" className="contact-page-main">
