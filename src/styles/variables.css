@@ -1,0 +1,91 @@
+:root {
+  /* Figma — fond primaire */
+
+  --fond-primaire-50: #f3f3f4;
+  --fond-primaire-100: #c5c3ca;
+  --fond-primaire-200: #9b97a4;
+  --fond-primaire-300: #6f6a7c;
+  --fond-primaire-400: #423c53;
+  --fond-primaire-500: #160e2b;
+  --fond-primaire-600: #120b22;
+  --fond-primaire-700: #0d081a;
+  --fond-primaire-800: #090611;
+  --fond-primaire-900: #040309;
+
+  /* Figma — fond secondaire */
+
+  --fond-sec-50: #f4f3f5;
+  --fond-sec-100: #c8c5ce;
+  --fond-sec-200: #a09baa;
+  --fond-sec-300: #756f85;
+  --fond-sec-400: #4b425f;
+  --fond-sec-500: #21163a;
+  --fond-sec-600: #1a122e;
+  --fond-sec-700: #140d23;
+  --fond-sec-800: #0d0917;
+  --fond-sec-900: #07040c;
+
+  /* Figma — rose néon */
+
+  --rose-neon-50: #fff5fe;
+  --rose-neon-100: #ffcdf8;
+  --rose-neon-200: #ffa8f3;
+  --rose-neon-300: #ff82ee;
+  --rose-neon-400: #ff5be8;
+  --rose-neon-500: #ff35e3;
+  --rose-neon-600: #cc2ab6;
+  --rose-neon-700: #991f88;
+  --rose-neon-800: #66155b;
+  --rose-neon-900: #330b2d;
+
+  /* Figma — bleu électro */
+
+  --bleu-electro-50: #f5f3fe;
+  --bleu-electro-100: #cfc2f9;
+  --bleu-electro-200: #ac97f4;
+  --bleu-electro-300: #8868ef;
+  --bleu-electro-400: #633aea;
+  --bleu-electro-500: #3f0ce5;
+  --bleu-electro-600: #320ab7;
+  --bleu-electro-700: #26078a;
+  --bleu-electro-800: #19055c;
+  --bleu-electro-900: #0d032e;
+
+  /* Figma — sunset */
+
+  --sunset-50: #fffaf6;
+  --sunset-100: #ffe2d2;
+  --sunset-200: #ffcdb2;
+  --sunset-300: #ffb690;
+  --sunset-400: #ffa06e;
+  --sunset-500: #ff8a4c;
+  --sunset-600: #cc6e3d;
+  --sunset-700: #99532e;
+  --sunset-800: #66371e;
+  --sunset-900: #331c0f;
+
+  /* Figma — vert */
+
+  --vert-50: #f3fdf2;
+  --vert-100: #c3f3bf;
+  --vert-200: #98eb91;
+  --vert-300: #6be261;
+  --vert-400: #3dd930;
+  --vert-500: #10d000;
+  --vert-600: #0da600;
+  --vert-700: #0a7d00;
+  --vert-800: #065300;
+  --vert-900: #032a00;
+
+  /* Échelle et composants */
+
+  --font-family: 'Inter', 'Segoe UI', sans-serif;
+  --font-family-heading: 'Audiowide', sans-serif;
+  --content-width: 1200px;
+  --page-gutter: clamp(20px, 4vw, 48px);
+  --radius-card: 32px;
+  --radius-control: 14px;
+  --border-glow: 1px solid rgb(255 205 248 / 45%);
+  --shadow-neon: 0 0 24px rgb(255 53 227 / 14%);
+  --transition-fast: 180ms ease;
+}

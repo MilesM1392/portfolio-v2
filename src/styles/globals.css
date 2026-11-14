@@ -1,0 +1,171 @@
+@import './variables.css';
+
+/* Audiowide n'a qu'une graisse normale ; les titres demandent le gras plus bas. */
+@font-face {
+  font-family: 'Audiowide';
+  src: url('../assets/fonts/Audiowide-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+/* Normalise le calcul des dimensions et évite les surprises dues aux marges natives. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Défilement doux pour les ancres de navigation ; la marge compense l'en-tête fixe. */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+  background: var(--fond-primaire-700);
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background: var(--fond-primaire-700);
+  color: var(--rose-neon-50);
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Style commun par défaut pour tous les niveaux de titres. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-heading);
+  font-weight: 700;
+}
+
+/* Champs et boutons reprennent la typographie du site plutôt que celle du navigateur. */
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Focus clavier visible pour les liens, boutons et champs. */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--sunset-300);
+  outline-offset: 4px;
+}
+
+::selection {
+  background: var(--rose-neon-500);
+  color: var(--fond-primaire-900);
+}
+
+/* Coupe les débordements décoratifs des sections plein écran. */
+
+.site-main {
+  overflow: clip;
+}
+
+.section-shell {
+  position: relative;
+  width: min(100%, var(--content-width));
+  margin-inline: auto;
+}
+
+.section-title {
+  margin: 0;
+  font-size: clamp(1.55rem, 2.8vw, 2rem);
+  line-height: 1.15;
+}
+
+.section-title::after {
+  display: block;
+  width: 54px;
+  height: 2px;
+  margin-top: 12px;
+  background: linear-gradient(90deg, var(--bleu-electro-400), var(--rose-neon-500));
+  content: '';
+}
+
+.section-divider {
+  height: 1px;
+  border: 0;
+  background: linear-gradient(90deg, transparent, var(--bleu-electro-400), var(--rose-neon-400), transparent);
+  opacity: .9;
+}
+
+/* État initial et état révélé par le composant Reveal.jsx. */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 650ms ease, transform 650ms ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Texte conservé pour les lecteurs d'écran sans occuper de place visuelle. */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 760px) {
+  /* Les ancres restent visibles sous la barre fixe, plus compacte sur mobile. */
+
+  html {
+    scroll-padding-top: 76px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* Respecte le réglage système : coupe animations et défilement doux. */
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

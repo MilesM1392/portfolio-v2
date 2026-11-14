@@ -1,0 +1,107 @@
+/* Container */
+
+.sparkle-cursor {
+  --x: 50%;
+  --y: 50%;
+
+  position: relative;
+}
+
+/* Hide native cursor */
+
+@media (hover: hover) and (pointer: fine) {
+  .sparkle-cursor {
+    cursor: none;
+  }
+}
+
+/* Trail container */
+
+.sparkle-trail {
+  position: absolute;
+  z-index: 5;
+  inset: 0;
+
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Individual stars */
+
+.sparkle-star {
+  position: absolute;
+
+  left: var(--x);
+  top: var(--y);
+
+  width: calc(30px - var(--i) * 4px);
+  height: calc(30px - var(--i) * 4px);
+
+  background: var(--sparkle-primary);
+
+  clip-path: polygon(
+    50% 0,
+    61% 39%,
+    100% 50%,
+    61% 61%,
+    50% 100%,
+    39% 61%,
+    0 50%,
+    39% 39%
+  );
+
+  transform: translate(-50%, -50%);
+
+  opacity: 0;
+
+  transition:
+    left calc(0.1s + var(--i) * 0.07s)
+      cubic-bezier(0.22, 1, 0.36, 1),
+    top calc(0.1s + var(--i) * 0.07s)
+      cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.3s;
+
+  animation: sparkle-twinkle 2.4s ease-in-out infinite;
+  animation-delay: calc(var(--i) * 0.15s);
+}
+
+/* Active state */
+
+.sparkle-cursor.is-active .sparkle-star {
+  opacity: calc(1 - var(--i) * 0.16);
+}
+
+/* Twinkle animation */
+
+@keyframes sparkle-twinkle {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1) rotate(0);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(0.55) rotate(45deg);
+  }
+}
+
+/* Secondary color */
+
+.sparkle-star:nth-child(even) {
+  background: var(--sparkle-secondary);
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .sparkle-star {
+    animation: none;
+    transition: none;
+  }
+}
+
+/* Touch devices */
+
+@media (hover: none), (pointer: coarse) {
+  .sparkle-trail {
+    display: none;
+  }
+}

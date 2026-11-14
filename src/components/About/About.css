@@ -1,0 +1,623 @@
+/* Présentation et parcours : dimensions desktop calées sur la composition du design. */
+
+.about-section {
+  position: relative;
+  width: 100%;
+  margin-inline: 0;
+  height: min(56.25vw, 90vh);
+  max-height: 90vh;
+  padding: 0;
+  overflow: hidden;
+  background: var(--fond-primaire-700);
+  color: var(--rose-neon-50);
+}
+
+.about-title {
+  position: absolute;
+  top: 19px;
+  left: 33px;
+  z-index: 1;
+  margin: 0;
+  color: #fff;
+  font-size: 32px;
+  line-height: 29px;
+}
+
+.about-header-divider,
+.about-profile-divider,
+.about-copy-divider,
+.education-links-divider,
+.education-underline {
+  position: absolute;
+  display: block;
+  max-width: none;
+  pointer-events: none;
+}
+
+.about-header-divider {
+  top: 80px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+}
+
+.about-profile-divider {
+  top: 50%;
+  left: calc(30.92% - min(28.125vw, 45vh) + 41px);
+  width: calc(min(56.25vw, 90vh) - 82px);
+  height: 2px;
+  transform: rotate(90deg);
+  transform-origin: center;
+}
+
+.about-layout {
+  position: absolute;
+  top: 82px;
+  right: 0;
+  left: 0;
+  display: grid;
+  height: calc(100% - 82px);
+  grid-template-columns: minmax(371px, 30.92%) minmax(0, 1fr);
+}
+
+.about-profile,
+.about-content {
+  position: relative;
+  min-width: 0;
+}
+
+/* Portrait en couches : blob décoratif, photo détourée et surimpression. */
+
+.portrait-frame {
+  position: absolute;
+  top: 19px;
+  left: 50%;
+  width: 204px;
+  height: 192px;
+  transform: translateX(-50%);
+}
+
+.portrait-blob {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+}
+
+.portrait-photo {
+  position: absolute;
+  top: 2px;
+  left: 14px;
+  width: 177px;
+  height: 186px;
+  overflow: hidden;
+  border-radius: 183px;
+}
+
+.portrait-photo img {
+  position: absolute;
+  display: block;
+  max-width: none;
+}
+
+.portrait-base {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 183px;
+  object-fit: cover;
+}
+
+.portrait-overlay {
+  top: 0;
+  left: -30.56%;
+  width: 143.83%;
+  height: 139.33%;
+}
+
+/* Carte de disponibilité sous le portrait. */
+
+.internship-card {
+  position: absolute;
+  top: 268px;
+  left: 50%;
+  width: 305px;
+  height: 176px;
+  padding: 24px 12px 12px;
+  border: 4px solid var(--sunset-500);
+  border-radius: 32px;
+  background: rgb(155 151 164 / 10%);
+  transform: translateX(-50%);
+}
+
+.internship-card h3 {
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 29px;
+  text-align: center;
+}
+
+.internship-card p {
+  margin: 0;
+  color: var(--sunset-100);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.about-intro {
+  position: absolute;
+  top: 42px;
+  right: clamp(48px, 7.17vw, 110px);
+  left: 26px;
+  display: flex;
+  height: 145px;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.about-intro h3 {
+  flex: 0 0 29px;
+  margin: 0;
+  color: #fff;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.about-intro p {
+  margin: 0;
+  color: var(--sunset-100);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.about-intro strong,
+.education-item strong,
+.professional-links strong {
+  font-weight: 900;
+}
+
+.about-intro strong {
+  color: var(--rose-neon-100);
+}
+
+.about-copy-divider {
+  top: 44.25%;
+  left: 1px;
+  width: calc(100% - 1px);
+  height: 2px;
+}
+
+/* La partie basse sépare la formation des liens et du bouton CV. */
+
+.about-lower {
+  position: absolute;
+  top: 44.45%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  column-gap: 32px;
+  padding-left: 18px;
+}
+
+.education-links-divider {
+  top: 144px;
+  left: calc(50% - 150px);
+  width: 290px;
+  height: 2px;
+  transform: rotate(90deg);
+  transform-origin: center;
+}
+
+.education-block {
+  position: relative;
+  top: 21px;
+  left: auto;
+  width: auto;
+  height: 256px;
+}
+
+.education-block h3,
+.professional-links h3 {
+  position: absolute;
+  top: 0;
+  left: 8px;
+  margin: 0;
+  color: #fff;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.education-underline {
+  top: 145px;
+  left: -101px;
+  width: 218px;
+  height: 3px;
+  transform: rotate(90deg);
+  transform-origin: center;
+}
+
+.education-list {
+  position: absolute;
+  top: 54px;
+  left: 0;
+  width: 359px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.education-item {
+  position: absolute;
+  left: 0;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 20px minmax(0, 1fr);
+  column-gap: 4px;
+}
+
+.education-item--but {
+  top: 0;
+}
+
+.education-item--bac {
+  top: 99px;
+}
+
+.timeline-marker {
+  width: 20px;
+  height: 20px;
+  max-width: none;
+}
+
+.education-item > div {
+  min-width: 0;
+}
+
+.education-item strong {
+  display: block;
+  color: var(--rose-neon-100);
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.education-school {
+  display: block;
+  color: var(--sunset-300);
+  font-size: 12px;
+  line-height: 17px;
+}
+
+.education-item p {
+  margin: 0;
+  color: var(--sunset-100);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.education-item--bac strong {
+  line-height: 15px;
+}
+
+.education-item--bac p {
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+.education-item p strong {
+  display: inline;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: 500;
+}
+
+.professional-links {
+  position: relative;
+  top: 21px;
+  left: auto;
+  width: auto;
+  height: 212px;
+}
+
+.professional-links h3 {
+  left: 0;
+}
+
+.professional-link,
+.cv-block {
+  position: absolute;
+  left: 0;
+  display: block;
+  color: var(--rose-neon-100);
+  text-decoration: none;
+}
+
+.professional-link--github {
+  top: 44px;
+}
+
+.professional-link--linkedin {
+  top: 102px;
+}
+
+.professional-link strong,
+.cv-block > strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.professional-link span {
+  display: block;
+  margin-top: 7px;
+  color: var(--sunset-100);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 17px;
+  text-decoration: underline;
+  overflow-wrap: anywhere;
+}
+
+.professional-link:hover span {
+  color: var(--rose-neon-50);
+}
+
+.cv-block {
+  top: 160px;
+}
+
+.cv-block > strong {
+  color: var(--rose-neon-100);
+}
+
+.cv-block button {
+  height: 26px;
+  margin-top: 6px;
+  padding: 3px 10px 4px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: var(--sunset-50);
+  border: 1px solid var(--sunset-500);
+  background: rgba(255, 138, 76, 0.14);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 17px;
+}
+
+.cv-block button:disabled {
+  cursor: not-allowed;
+}
+
+/* À cette largeur, les éléments positionnés deviennent un flux responsive. */
+
+@media (max-width: 1120px) {
+  .about-section {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .about-title {
+    left: var(--page-gutter);
+  }
+
+  .about-header-divider {
+    width: 100%;
+  }
+
+  .about-profile-divider {
+    display: none;
+  }
+
+  .about-layout {
+    position: relative;
+    top: auto;
+    display: block;
+    height: auto;
+    padding-top: 82px;
+  }
+
+  .about-profile {
+    display: grid;
+    min-height: 258px;
+    grid-template-columns: 204px minmax(260px, 305px);
+    align-items: center;
+    justify-content: center;
+    gap: clamp(24px, 5vw, 60px);
+    padding: 22px var(--page-gutter);
+    border-bottom: 1px solid var(--rose-neon-500);
+  }
+
+  .portrait-frame {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+  }
+
+  .internship-card {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    transform: none;
+  }
+
+  .about-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-intro {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    height: auto;
+    min-height: 145px;
+    padding: 28px var(--page-gutter);
+  }
+
+  .about-intro p {
+    max-width: 717px;
+  }
+
+  .about-copy-divider {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: 2px;
+  }
+
+  .about-lower {
+    position: relative;
+    inset: auto;
+    display: grid;
+    min-height: 310px;
+    grid-template-columns: minmax(0, 1.2fr) minmax(270px, .8fr);
+    column-gap: 0;
+    padding: 22px var(--page-gutter) 32px;
+  }
+
+  .education-links-divider {
+    display: none;
+  }
+
+  .education-block {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: auto;
+    height: auto;
+    min-height: 256px;
+  }
+
+  .education-block h3, .professional-links h3 {
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+
+  .education-underline {
+    display: none;
+  }
+
+  .education-list {
+    position: relative;
+    top: auto;
+    left: auto;
+    display: flex;
+    width: auto;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 18px;
+  }
+
+  .education-item {
+    position: relative;
+    top: auto;
+  }
+
+  .education-item--bac strong {
+    line-height: 18px;
+  }
+
+  .professional-links {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: auto;
+    height: auto;
+    min-height: 212px;
+    padding-left: 28px;
+    border-left: 1px solid var(--rose-neon-500);
+  }
+
+  .professional-links h3 {
+    margin-bottom: 15px;
+  }
+
+  .professional-link, .cv-block {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin-bottom: 15px;
+  }
+}
+
+/* Sur téléphone, portrait, texte, formation et liens sont empilés. */
+
+@media (max-width: 700px) {
+  .about-title {
+    top: 21px;
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .about-profile {
+    display: flex;
+    min-height: 0;
+    flex-direction: column;
+    gap: 18px;
+    padding: 28px 20px;
+  }
+
+  .portrait-frame {
+    flex: none;
+  }
+
+  .internship-card {
+    width: min(100%, 305px);
+  }
+
+  .about-intro {
+    gap: 10px;
+    padding: 24px 20px;
+  }
+
+  .about-intro h3 {
+    font-size: 22px;
+  }
+
+  .about-intro p {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .about-lower {
+    grid-template-columns: 1fr;
+    gap: 26px;
+    padding: 24px 20px 32px;
+  }
+
+  .education-links-divider {
+    display: none;
+  }
+
+  .education-block {
+    min-height: 0;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgb(255 205 248 / 38%);
+  }
+
+  .professional-links {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .professional-links h3 {
+    margin-bottom: 15px;
+  }
+
+  .professional-link span {
+    overflow-wrap: anywhere;
+  }
+}

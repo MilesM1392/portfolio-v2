@@ -1,0 +1,21 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="29.8447" height="30.9778" viewBox="0 0 29.8447 30.9778" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="laravel-mark">
+<path id="Vector" d="M0.755692 4.53333L7.3668 0.755556L13.9779 4.53333V18.2278L17.7557 16.0556V8.31111L23.4224 5.00556L29.089 8.31111V21.5333L13.9779 30.2222L0.755692 22.6667V4.53333Z" stroke-width="1.51111" stroke-linecap="round" stroke-linejoin="round" stroke="url(#paint0_linear_0_287)"/>
+<path id="Vector_2" d="M0.755685 4.53331L7.3668 8.31108M7.3668 8.31108L13.9779 4.53331M7.3668 8.31108V22.0055L13.9779 25.7833V30.2222" stroke-width="1.51111" stroke-linecap="round" stroke-linejoin="round" stroke="url(#paint1_linear_0_287)"/>
+<path id="Vector_3" d="M17.7557 8.31108L23.4224 11.6166M23.4224 11.6166L29.089 8.31108M23.4224 11.6166V19.3611M29.089 16.0555L23.4224 19.3611L17.7557 16.0555L7.3668 22.0055M13.9779 25.7833L29.089 17.0944" stroke-width="1.51111" stroke-linecap="round" stroke-linejoin="round" stroke="url(#paint2_linear_0_287)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_287" x1="14.9224" y1="0.755556" x2="14.9224" y2="30.2222" gradientUnits="userSpaceOnUse">
+<stop stop-color="#320AB7"/>
+<stop offset="1" stop-color="#FFCDF8"/>
+</linearGradient>
+<linearGradient id="paint1_linear_0_287" x1="7.3668" y1="4.53331" x2="7.3668" y2="30.2222" gradientUnits="userSpaceOnUse">
+<stop stop-color="#320AB7"/>
+<stop offset="1" stop-color="#FFCDF8"/>
+</linearGradient>
+<linearGradient id="paint2_linear_0_287" x1="18.2279" y1="8.31108" x2="18.2279" y2="25.7833" gradientUnits="userSpaceOnUse">
+<stop stop-color="#320AB7"/>
+<stop offset="1" stop-color="#FFCDF8"/>
+</linearGradient>
+</defs>
+</svg>

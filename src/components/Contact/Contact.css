@@ -1,0 +1,197 @@
+/* Ancienne section de contact intégrée, conservée pour un éventuel réemploi. */
+
+.contact-section {
+  padding: 48px var(--page-gutter) 62px;
+  border-top: 1px solid rgb(255 205 248 / 45%);
+  background: radial-gradient(ellipse at 0 100%, rgb(50 10 183 / 20%), transparent 48%), var(--fond-primaire-700);
+}
+
+.contact-inner {
+  display: grid;
+  grid-template-columns: minmax(220px, .65fr) minmax(0, 1.35fr);
+  gap: clamp(30px, 6vw, 72px);
+}
+
+.contact-heading .section-title {
+  margin-top: 10px;
+}
+
+.contact-heading > p {
+  max-width: 300px;
+  margin: 18px 0;
+  color: var(--fond-primaire-100);
+  font-size: .9rem;
+  line-height: 1.65;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.contact-links a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  border: 1px solid rgb(99 58 234 / 55%);
+  border-radius: 16px;
+  background: rgb(18 11 34 / 60%);
+  text-decoration: none;
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.contact-links a:hover {
+  border-color: var(--rose-neon-500);
+  transform: translateX(3px);
+}
+
+.contact-icon {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid var(--rose-neon-200);
+  border-radius: 13px;
+  color: var(--rose-neon-100);
+  font-size: .85rem;
+  font-weight: 900;
+}
+
+.contact-icon img {
+  width: 18px;
+  height: 18px;
+}
+
+.contact-links strong, .contact-links small {
+  display: block;
+}
+
+.contact-links strong {
+  margin-bottom: 4px;
+  color: var(--rose-neon-50);
+  font-size: .85rem;
+}
+
+.contact-links small {
+  color: var(--fond-primaire-200);
+  font-size: .72rem;
+  overflow-wrap: anywhere;
+}
+
+/* Champs du formulaire et bouton d'envoi mailto. */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: clamp(20px, 4vw, 34px);
+  border: 1px solid var(--sunset-500);
+  border-radius: 24px;
+  background: rgb(18 11 34 / 82%);
+  box-shadow: 0 14px 40px rgb(4 3 10 / 23%);
+}
+
+.form-note {
+  margin: 0 0 4px;
+  color: var(--fond-primaire-200);
+  font-size: .75rem;
+  line-height: 1.5;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.contact-form label {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 7px;
+  color: var(--rose-neon-100);
+  font-size: .78rem;
+  font-weight: 700;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 12px 13px;
+  border: 1px solid var(--fond-primaire-300);
+  border-radius: 11px;
+  background: var(--fond-primaire-800);
+  color: var(--rose-neon-50);
+  font-size: .85rem;
+}
+
+.contact-form textarea {
+  min-height: 126px;
+  resize: vertical;
+}
+
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+  color: var(--fond-primaire-300);
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+  border-color: var(--sunset-300);
+  outline: none;
+  box-shadow: 0 0 0 3px rgb(255 138 76 / 16%);
+}
+
+.contact-form .button {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  align-self: flex-start;
+  padding: 0 20px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--bleu-electro-500);
+  color: var(--rose-neon-50);
+  cursor: pointer;
+  font-size: .88rem;
+  font-weight: 800;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+}
+
+.contact-form .button:hover {
+  background: var(--rose-neon-500);
+  color: var(--fond-primaire-900);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-neon);
+}
+
+/* Les coordonnées passent au-dessus du formulaire sur écran étroit. */
+
+@media (max-width: 760px) {
+  .contact-section {
+    padding-block: 38px 46px;
+  }
+
+  .contact-inner {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .contact-heading > p {
+    max-width: 500px;
+  }
+
+  .contact-links {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,211 @@
+/* Mise en page de la page Contact autonome : coordonnées et formulaire en deux colonnes. */
+
+.contact-page {
+  min-height: 100vh;
+  background: var(--fond-primaire-700);
+  color: var(--rose-neon-50);
+}
+
+.contact-page-header {
+  display: flex;
+  justify-content: center;
+  padding: 32px 20px;
+}
+
+.contact-page-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 10px;
+  border: 1px solid var(--rose-neon-50);
+  border-radius: 30px;
+  background: var(--fond-primaire-700);
+}
+
+.contact-page-nav a {
+  padding: 13px 20px;
+  border-radius: 38px;
+  background: rgb(255 255 255 / 5%);
+  color: var(--rose-neon-50);
+  font-size: 13px;
+  font-weight: 900;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.contact-page-nav a:hover {
+  background: rgb(255 255 255 / 12%);
+}
+
+.contact-page-nav .is-current {
+  background: var(--bleu-electro-500);
+}
+
+.contact-page-main {
+  display: grid;
+  width: min(calc(100% - 64px), 1460px);
+  min-height: min(68vh, 700px);
+  grid-template-columns: minmax(320px, .72fr) minmax(0, 1.28fr);
+  align-items: center;
+  gap: clamp(52px, 7vw, 120px);
+  margin: 0 auto;
+  padding: 24px 0 56px;
+}
+
+.contact-page-intro h1 {
+  margin: 0 0 28px;
+  color: var(--rose-neon-100);
+  font-size: clamp(2.8rem, 4vw, 4rem);
+  letter-spacing: -.03em;
+}
+
+.contact-lead {
+  max-width: 420px;
+  margin: 0;
+  font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+  line-height: 1.5;
+}
+
+.contact-email-copy {
+  margin: 34px 0 0;
+  color: var(--fond-primaire-100);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.contact-email-copy a, .contact-linkedin-copy a {
+  color: var(--rose-neon-100);
+  font-weight: 700;
+}
+
+.contact-linkedin-copy {
+  margin-top: 50px;
+}
+
+.contact-linkedin-copy h2 {
+  margin: 0 0 12px;
+  color: var(--rose-neon-100);
+  font-size: 1.4rem;
+}
+
+/* Carte et champs du formulaire piloté depuis ContactPage.jsx. */
+
+.contact-page-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: clamp(30px, 4vw, 48px);
+  border: 2px solid var(--bleu-electro-600);
+  border-radius: 32px;
+  background: var(--fond-primaire-600);
+}
+
+.contact-page-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.contact-page-form label {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--rose-neon-100);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.contact-page-form input, .contact-page-form textarea {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid var(--fond-primaire-300);
+  border-radius: 12px;
+  background: var(--fond-primaire-700);
+  color: var(--rose-neon-50);
+  font: inherit;
+  font-size: 15px;
+}
+
+.contact-page-form input {
+  height: 52px;
+  padding: 0 15px;
+}
+
+.contact-page-form textarea {
+  min-height: 160px;
+  padding: 14px 15px;
+  resize: vertical;
+}
+
+.contact-page-form input::placeholder, .contact-page-form textarea::placeholder {
+  color: var(--fond-primaire-200);
+}
+
+.contact-page-form button {
+  min-width: 132px;
+  height: 48px;
+  align-self: flex-start;
+  padding: 0 22px;
+  border: 0;
+  border-radius: 30px;
+  background: var(--bleu-electro-500);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.contact-page-form button:hover {
+  background: var(--rose-neon-500);
+  color: var(--fond-primaire-900);
+}
+
+/* Sur tablette et téléphone, contenu en une colonne avec marges plus étroites. */
+
+@media (max-width: 760px) {
+  .contact-page-header {
+    padding: 16px 10px;
+  }
+
+  .contact-page-nav {
+    gap: 2px;
+  }
+
+  .contact-page-nav a {
+    padding: 11px 8px;
+    font-size: 11px;
+  }
+
+  .contact-page-main {
+    width: calc(100% - 36px);
+    min-height: 0;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 20px 0 44px;
+  }
+
+  .contact-page-intro h1 {
+    margin-bottom: 16px;
+    font-size: 2.5rem;
+  }
+
+  .contact-email-copy {
+    margin-top: 20px;
+  }
+
+  .contact-linkedin-copy {
+    margin-top: 28px;
+  }
+
+  .contact-page-form {
+    gap: 16px;
+    padding: 22px 18px;
+    border-radius: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-page-row {
+    grid-template-columns: 1fr;
+  }
+}
