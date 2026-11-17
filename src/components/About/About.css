@@ -4,8 +4,8 @@
   position: relative;
   width: 100%;
   margin-inline: 0;
-  height: min(56.25vw, 90vh);
-  max-height: 90vh;
+  height: calc(min(56.25vw, 90vh) - 40px);
+  max-height: calc(90vh - 40px);
   padding: 0;
   overflow: hidden;
   background: var(--fond-primaire-700);
@@ -42,7 +42,7 @@
 }
 
 .about-profile-divider {
-  top: 50%;
+  top: calc(50% + 20px);
   left: calc(30.92% - min(28.125vw, 45vh) + 41px);
   width: calc(min(56.25vw, 90vh) - 82px);
   height: 2px;
@@ -250,7 +250,7 @@
   top: auto;
   left: auto;
   display: flex;
-  width: 359px;
+  width: 100%;
   margin: 0;
   padding: 0;
   flex-direction: column;
@@ -497,7 +497,7 @@
     inset: auto;
     display: grid;
     min-height: 310px;
-    grid-template-columns: minmax(0, 1.2fr) minmax(270px, .8fr);
+    grid-template-columns: minmax(0, 1.5fr) minmax(250px, .5fr);
     column-gap: 0;
     padding: 22px var(--page-gutter) 32px;
   }

@@ -5,7 +5,7 @@ import { skillCategories } from '../../data/skills.js'
 import Reveal from '../Reveal.jsx'
 import './Skills.css'
 
-import phpIcon from '../../assets/images/php-mark.png'
+import phpIcon from '../../assets/icons/php.svg'
 import laravelIcon from '../../assets/icons/laravel.svg'
 import pythonUpper from '../../assets/icons/python-upper.svg'
 import pythonLower from '../../assets/icons/python-lower.svg'
@@ -16,6 +16,29 @@ import mysqlIcon from '../../assets/icons/mysql.svg'
 import mariaIcon from '../../assets/icons/mariadb.svg'
 import databaseIcon from '../../assets/icons/database.svg'
 import phpMyAdminIcon from '../../assets/icons/phpmyadmin.svg'
+import apacheIcon from '../../assets/icons/skills/Apache.svg'
+import affinityIcon from '../../assets/icons/skills/Affinity.svg'
+import illustratorIcon from '../../assets/icons/skills/Ai.svg'
+import androidIcon from '../../assets/icons/skills/Android.svg'
+import bashIcon from '../../assets/icons/skills/Bash.svg'
+import capcutIcon from '../../assets/icons/skills/Capcut.svg'
+import davinciIcon from '../../assets/icons/skills/Davinci.svg'
+import figmaIcon from '../../assets/icons/skills/Figma.svg'
+import gitIcon from '../../assets/icons/skills/Git.svg'
+import githubSkillIcon from '../../assets/icons/skills/Github.svg'
+import htmlIcon from '../../assets/icons/skills/Symbole — HTML.svg'
+import cssIcon from '../../assets/icons/skills/Symbole — CSS.svg'
+import indesignIcon from '../../assets/icons/skills/Indesign.svg'
+import javaIcon from '../../assets/icons/skills/Java.svg'
+import javascriptIcon from '../../assets/icons/skills/JavaScript.svg'
+import lightroomIcon from '../../assets/icons/skills/Lightroom.svg'
+import linuxIcon from '../../assets/icons/skills/Linux.svg'
+import photoshopIcon from '../../assets/icons/skills/Ps.svg'
+import reactIcon from '../../assets/icons/skills/React.svg'
+import retrofitIcon from '../../assets/icons/skills/Retrofit.svg'
+import viteIcon from '../../assets/icons/skills/Vite.svg'
+import vscodeIcon from '../../assets/icons/skills/Vscode.svg'
+import wordpressIcon from '../../assets/icons/skills/Wordpress.svg'
 
 const iconMap = {
   // Les identifiants des données pointent ici vers les fichiers d'icônes.
@@ -28,6 +51,29 @@ const iconMap = {
   mariadb: mariaIcon,
   database: databaseIcon,
   phpmyadmin: phpMyAdminIcon,
+  apache: apacheIcon,
+  affinity: affinityIcon,
+  illustrator: illustratorIcon,
+  android: androidIcon,
+  bash: bashIcon,
+  capcut: capcutIcon,
+  davinci: davinciIcon,
+  figma: figmaIcon,
+  git: gitIcon,
+  github: githubSkillIcon,
+  html: htmlIcon,
+  css: cssIcon,
+  indesign: indesignIcon,
+  java: javaIcon,
+  javascript: javascriptIcon,
+  lightroom: lightroomIcon,
+  linux: linuxIcon,
+  photoshop: photoshopIcon,
+  react: reactIcon,
+  retrofit: retrofitIcon,
+  vite: viteIcon,
+  vscode: vscodeIcon,
+  wordpress: wordpressIcon,
 }
 
 function TechnologyCard({ technology }) {

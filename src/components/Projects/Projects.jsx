@@ -52,7 +52,7 @@ function Projects() {
                 <div className="project-cover" aria-hidden="true">
                   <span className="cover-sun" />
                   <span className="cover-grid" />
-                  <span className="project-badge">À compléter</span>
+                  <span className="project-badge">{project.badge}</span>
                 </div>
                 <div className="project-content">
                   <p className="project-category">{project.category}</p>
