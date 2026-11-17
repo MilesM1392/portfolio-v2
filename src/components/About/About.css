@@ -123,7 +123,8 @@
   top: 268px;
   left: 50%;
   width: 305px;
-  height: 176px;
+  min-height: 176px;
+  height: auto;
   padding: 24px 12px 12px;
   border: 4px solid var(--sunset-500);
   border-radius: 32px;
@@ -142,7 +143,7 @@
 .internship-card p {
   margin: 0;
   color: var(--sunset-100);
-  font-size: 14px;
+  font-size: 1.2rem;
   font-weight: 500;
   line-height: 1.4;
 }
@@ -153,7 +154,8 @@
   right: clamp(48px, 7.17vw, 110px);
   left: 26px;
   display: flex;
-  height: 145px;
+  min-height: 145px;
+  height: auto;
   flex-direction: column;
   gap: 8px;
 }
@@ -169,7 +171,7 @@
 .about-intro p {
   margin: 0;
   color: var(--sunset-100);
-  font-size: 12px;
+  font-size: 1.2rem;
   font-weight: 500;
   line-height: 1.4;
 }
@@ -219,7 +221,8 @@
   top: 21px;
   left: auto;
   width: auto;
-  height: 256px;
+  min-height: 256px;
+  height: auto;
 }
 
 .education-block h3,
@@ -243,17 +246,21 @@
 }
 
 .education-list {
-  position: absolute;
-  top: 54px;
-  left: 0;
+  position: relative;
+  top: auto;
+  left: auto;
+  display: flex;
   width: 359px;
   margin: 0;
   padding: 0;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 54px;
   list-style: none;
 }
 
 .education-item {
-  position: absolute;
+  position: relative;
   left: 0;
   display: grid;
   width: 100%;
@@ -266,7 +273,7 @@
 }
 
 .education-item--bac {
-  top: 99px;
+  top: auto;
 }
 
 .timeline-marker {
@@ -282,26 +289,26 @@
 .education-item strong {
   display: block;
   color: var(--rose-neon-100);
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 1.2rem;
+  line-height: 1.4;
 }
 
 .education-school {
   display: block;
   color: var(--sunset-300);
-  font-size: 12px;
-  line-height: 17px;
+  font-size: 1.2rem;
+  line-height: 1.4;
 }
 
 .education-item p {
   margin: 0;
   color: var(--sunset-100);
-  font-size: 12px;
+  font-size: 1.2rem;
   line-height: 1.4;
 }
 
 .education-item--bac strong {
-  line-height: 15px;
+  line-height: 1.4;
 }
 
 .education-item--bac p {
@@ -321,16 +328,20 @@
   top: 21px;
   left: auto;
   width: auto;
-  height: 212px;
+  min-height: 212px;
+  height: auto;
 }
 
 .professional-links h3 {
+  position: relative;
+  top: auto;
   left: 0;
+  margin-bottom: 0;
 }
 
 .professional-link,
 .cv-block {
-  position: absolute;
+  position: relative;
   left: 0;
   display: block;
   color: var(--rose-neon-100);
@@ -338,28 +349,30 @@
 }
 
 .professional-link--github {
-  top: 44px;
+  top: auto;
+  margin-top: 15px;
 }
 
 .professional-link--linkedin {
-  top: 102px;
+  top: auto;
+  margin-top: 15px;
 }
 
 .professional-link strong,
 .cv-block > strong {
   display: block;
-  font-size: 14px;
+  font-size: 1.2rem;
   font-weight: 600;
-  line-height: 20px;
+  line-height: 1.4;
 }
 
 .professional-link span {
   display: block;
   margin-top: 7px;
   color: var(--sunset-100);
-  font-size: 12px;
+  font-size: 1.2rem;
   font-weight: 400;
-  line-height: 17px;
+  line-height: 1.4;
   text-decoration: underline;
   overflow-wrap: anywhere;
 }
@@ -369,7 +382,8 @@
 }
 
 .cv-block {
-  top: 160px;
+  top: auto;
+  margin-top: 15px;
 }
 
 .cv-block > strong {
@@ -377,7 +391,8 @@
 }
 
 .cv-block button {
-  height: 26px;
+  min-height: 34px;
+  height: auto;
   margin-top: 6px;
   padding: 3px 10px 4px;
   border: 1px solid transparent;
@@ -385,9 +400,9 @@
   color: var(--sunset-50);
   border: 1px solid var(--sunset-500);
   background: rgba(255, 138, 76, 0.14);
-  font-size: 12px;
+  font-size: 1.2rem;
   font-weight: 400;
-  line-height: 17px;
+  line-height: 1.4;
 }
 
 .cv-block button:disabled {
@@ -396,7 +411,7 @@
 
 /* À cette largeur, les éléments positionnés deviennent un flux responsive. */
 
-@media (max-width: 1120px) {
+@media (max-width: 1700px) {
   .about-section {
     width: 100%;
     height: auto;
@@ -511,23 +526,13 @@
   }
 
   .education-list {
-    position: relative;
-    top: auto;
-    left: auto;
-    display: flex;
     width: auto;
-    flex-direction: column;
-    gap: 18px;
     margin-top: 18px;
   }
 
   .education-item {
     position: relative;
     top: auto;
-  }
-
-  .education-item--bac strong {
-    line-height: 18px;
   }
 
   .professional-links {
@@ -546,7 +551,6 @@
   }
 
   .professional-link, .cv-block {
-    position: relative;
     top: auto;
     left: auto;
     margin-bottom: 15px;
@@ -588,7 +592,7 @@
   }
 
   .about-intro p {
-    font-size: 13px;
+    font-size: 1.2rem;
     line-height: 1.55;
   }
 

@@ -37,7 +37,7 @@ function Navbar() {
             <ScrambleText text={label} duration={320} hover={false} />
           </a>
         ))}
-        <a className="nav-contact" href="/portfolio/contact.html" onClick={closeMenu}>
+        <a className="nav-contact" href={`${import.meta.env.BASE_URL}contact.html`} onClick={closeMenu}>
           <ScrambleText text="Me contacter" duration={320} hover={false} />
         </a>
       </nav>

@@ -35,8 +35,8 @@ function Footer() {
         </div>
         <nav className="footer-navigation" aria-label="Navigation secondaire">
           <a href={githubUrl} target="_blank" rel="noreferrer"><img src={githubIcon} alt="" /> GitHub</a>
-          <a href="/portfolio/contact.html">Contact</a>
-          <a href="/portfolio/mentions-legales.html">Mentions légales</a>
+          <a href={`${import.meta.env.BASE_URL}contact.html`}>Contact</a>
+          <a href={`${import.meta.env.BASE_URL}mentions-legales.html`}>Mentions légales</a>
         </nav>
         <div className="footer-divider" />
         <div className="footer-bottom">
