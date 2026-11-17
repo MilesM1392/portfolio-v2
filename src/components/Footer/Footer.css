@@ -1,12 +1,15 @@
 /* Pied commun : identité à gauche, raccourcis à droite, copyright en bas. */
 
 .site-footer {
-  padding: 34px var(--page-gutter) 22px;
+  /*padding: 34px var(--page-gutter) 22px;*/
+  position: relative;
   border-top: 1px solid var(--rose-neon-500);
-  background: var(--fond-primaire-600);
+  background: var(--fond-primaire-600, #211c30);
+  z-index:1;
 }
 
 .footer-main {
+
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
