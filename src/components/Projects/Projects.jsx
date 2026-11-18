@@ -49,9 +49,15 @@ function Projects() {
           <div className="projects-track" aria-live="polite">
             {visibleProjects.map((project) => (
               <article key={`${project.id}-${project.offset}`} className={`project-card project-card--${project.theme} ${project.offset === 0 ? 'is-active' : ''}`}>
-                <div className="project-cover" aria-hidden="true">
-                  <span className="cover-sun" />
-                  <span className="cover-grid" />
+                <div className={`project-cover ${project.image ? 'has-image' : ''}`} aria-hidden="true">
+                  {project.image ? (
+                    <img className="project-cover-image" src={project.image} alt="" />
+                  ) : (
+                    <>
+                      <span className="cover-sun" />
+                      <span className="cover-grid" />
+                    </>
+                  )}
                   <span className="project-badge">{project.badge}</span>
                 </div>
                 <div className="project-content">

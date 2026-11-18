@@ -89,7 +89,7 @@ function About() {
               </a>
               <div className="cv-block">
                 <strong>Mon CV</strong>
-                <button type="button" disabled title="Le fichier PDF du CV reste à ajouter">Télécharger mon CV</button>
+                <a href={`${import.meta.env.BASE_URL}Aaron_Fahrasmane_cv-2.pdf`}>Voir mon CV</a>
               </div>
             </article>
           </div>

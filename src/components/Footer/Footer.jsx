@@ -12,7 +12,7 @@ function Footer() {
         <div className="footer-signature">
           <a className="footer-name" href="#accueil">Aaron Fahrasmane</a>
           <p>Développeur web · Portfolio</p>
-          <span className="footer-cv-placeholder">CV à ajouter</span>
+          <a className="footer-cv-placeholder" href={`${import.meta.env.BASE_URL}Aaron_Fahrasmane_cv-2.pdf`}>Voir mon CV</a>
           <div className="footer-coordinates" aria-label="Coordonnées">
             <div className="footer-social-links">
               <a href={linkedinUrl} target="_blank" rel="noreferrer" aria-label="LinkedIn, nouvelle fenêtre"><span className="footer-linkedin-mark" aria-hidden="true">in</span> LinkedIn</a>

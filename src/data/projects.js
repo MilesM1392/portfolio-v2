@@ -1,8 +1,11 @@
-// Source des cartes du carrousel. Remplacer les exemples par les projets réels ;
+// Source des cartes du carrousel. Pour une image, dépose le fichier dans
+// public/images/projects/ puis renseigne `image`, par exemple :
+// image: '/images/projects/cerebro.webp'. Laisse une chaîne vide sans image.
 // `theme` choisit la couleur, les URL activent les boutons et `features` remplit la modale.
 export const projects = [
   {
     id: 'cerebro',
+    image: '',
     category: 'Développement web',
     title: 'Cerebro',
     description: 'La plateforme centralise des outils de gestion de projet type JIRA, suivi des rendus pour les étudiants, contenus pédagogiques et outils d’aide au développement web.',
@@ -15,6 +18,7 @@ export const projects = [
   },
   {
     id: 'MilesTube',
+    image: '',
     category: 'Développement web',
     title: 'MilesTube - MP3 downloader',
     description: 'MileTube est une application web permettant de télécharger et de convertir des contenus multimédias à partir de youtube',
@@ -27,6 +31,7 @@ export const projects = [
   },
   {
     id: 's203',
+    image: '',
     category: 'Dévelopepment Web',
     title: 'Champi-blog',
     description: 'Refonte d’un site documentaire avec une architecture MVC en PHP orienté objet et base de données, intégrant un système de commentaires et des filtres interactifs en JavaScript/AJAX.',
@@ -39,6 +44,7 @@ export const projects = [
   },
   {
     id: 'word-damic',
+    image: '',
     category: 'Site Wordpress',
     title: 'DA-MIC group',
     description: "Création d'un site vitrine pour une agence de communication fictive spécialisée dans le sport et l'évennementiel. Site réalisé avec wordpress, tout le contenu est aussi de notre création",
@@ -51,6 +57,7 @@ export const projects = [
   },
     {
     id: 'todesk-app',
+    image: '',
     category: 'Développement mobile',
     title: 'ToDesk',
     description: "Développement d'une application Android en Java permettant le suivi des rendus pour mes camarades en BUT MMI. Utilise une api développé en php et jointe via Retrofit",
@@ -63,6 +70,7 @@ export const projects = [
   },
   {
     id: 'portfolio-v2',
+    image: '',
     category: 'Développement Web',
     title: 'Portfolio personnel',
     description: "Design et développement de mon portfolio personnel destiné à montrer mon travail ainsi que mon univers",
@@ -75,6 +83,7 @@ export const projects = [
   },
   {
     id: 'mvp-mockups',
+    image: '',
     category: 'Design UX/UI',
     title: 'MVP - Most Valuable Party',
     description: "Design d'une application de rencontre entre sportifs en terme de besoins et de style.",
@@ -87,6 +96,7 @@ export const projects = [
   },
   {
     id: 'shooting-skylin',
+    image: '',
     category: 'Photographie',
     title: 'Skylin.m',
     description: "Prise et édtition de photos pour le lancement d'une marque de prêt à porter",
@@ -99,6 +109,7 @@ export const projects = [
   },
   {
     id: 'shooting-louis',
+    image: '',
     category: 'Photographie',
     title: 'Louis',
     description: "Prise et édtition de photos pour un ami mannequin",
@@ -111,6 +122,7 @@ export const projects = [
   },
   {
     id: 'password-generator',
+    image: '',
     category: 'Développement Web',
     title: 'Password générator',
     description: "Création d'un générateur de mot de passe aléatoire et sécurisé et possibilité de stockage. Créé entièrement en python avec Tkinter",
@@ -123,6 +135,7 @@ export const projects = [
   },
   {
     id: 'rest-jeux',
+    image: '',
     category: 'Développement Web',
     title: 'API Catalogue de jeux',
     description: "création d'une API REST qui permet de gérer un catalogue de jeux en communiquant avec une base de données",
