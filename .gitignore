@@ -6,5 +6,5 @@ dist-domain/
 .DS_Store
 
 .codex/
-.agent/
+.agents/
 .aws/

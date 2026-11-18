@@ -6,7 +6,7 @@ export const projects = [
     category: 'Développement web',
     title: 'Cerebro',
     description: 'La plateforme centralise des outils de gestion de projet type JIRA, suivi des rendus pour les étudiants, contenus pédagogiques et outils d’aide au développement web.',
-    technologies: ['Laravel', 'MySql', "JavaScript", "Blade"],
+    technologies: ['Laravel', 'MySql', "JavaScript", "Blade", "HTML/CSS"],
     features: ['Contexte et objectif à renseigner', 'Fonctionnalités à détailler'],
     githubUrl: 'https://github.com/tonduangujoao-ship-it/CEREBRO',
     projectUrl: 'https://cerebro-edu.fr',
@@ -100,7 +100,7 @@ export const projects = [
   {
     id: 'shooting-louis',
     category: 'Photographie',
-    title: 'Skylin.m',
+    title: 'Louis',
     description: "Prise et édtition de photos pour un ami mannequin",
     technologies: ["Lightroom", "Photoshop"],
     features: ['Capture à ajouter', 'Liens à ajouter'],
@@ -108,6 +108,30 @@ export const projects = [
     projectUrl: '',
     theme: 'violet',
     badge: 'Projet Perso'
+  },
+  {
+    id: 'password-generator',
+    category: 'Développement Web',
+    title: 'Password générator',
+    description: "Création d'un générateur de mot de passe aléatoire et sécurisé et possibilité de stockage. Créé entièrement en python avec Tkinter",
+    technologies: ["Python", "Tkinter"],
+    features: ['Capture à ajouter', 'Liens à ajouter'],
+    githubUrl: 'https://github.com/MilesM1392/py-password-generator',
+    projectUrl: '',
+    theme: 'sunset',
+    badge: 'Projet personnel'
+  },
+  {
+    id: 'rest-jeux',
+    category: 'Développement Web',
+    title: 'API Catalogue de jeux',
+    description: "création d'une API REST qui permet de gérer un catalogue de jeux en communiquant avec une base de données",
+    technologies: ["PHP", "MySql", "Apache"],
+    features: ['Capture à ajouter', 'Liens à ajouter'],
+    githubUrl: '',
+    projectUrl: '',
+    theme: 'sunset',
+    badge: 'Projet académique'
   },
 
 ]
